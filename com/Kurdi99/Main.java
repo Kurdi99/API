@@ -1,5 +1,5 @@
 package com.Kurdi99;
-import org.bukkit.plugin.java.javaplugin
+import org.bukkit.plugin.java.javaplugin;
 
 
 public class Main extends JavaPlugin {
