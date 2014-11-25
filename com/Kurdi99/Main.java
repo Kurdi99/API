@@ -10,5 +10,12 @@ public void onEnable() {
 public void onDisable() {
 //Later On
 }
+public boolean isFlying(Player p, String name) {
+  if(!p.getFly(true)){
+    return;
+  }else{
+return isFlying;
+  }
+}
 
 }
