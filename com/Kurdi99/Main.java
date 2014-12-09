@@ -5,7 +5,7 @@ import org.bukkit.plugin.java.javaplugin;
 public class Main extends JavaPlugin {
 
 public void onEnable() {
-//Later On
+Bukkit.getServer().getPluginManager().registerEvents(this, this);
 }
 public void onDisable() {
 //Later On
@@ -20,5 +20,12 @@ public boolean isFlying(Player p, String name) {
 return isFlying;
   }
 }
-
+@EventHandler(priority = Priority.HIGH)
+public void onPlayerChat(AsyncPlayerChatEvent e){
+  if(e.getMessage.equalsIgnoreCase("fly")){
+    e.setCancelled(true);
+    e.getPlayer().setFlying(true);
+    e.getPlayer().sendMessage(ChatColor.GOLD + "You can fly!");
+    
+}
 }
