@@ -14,6 +14,9 @@ public boolean isFlying(Player p, String name) {
   if(!p.getFly(true)){
     return;
   }else{
+    isFlying = false;
+    String str = "You cannot fly!";
+    p.sendMessage(ChatColor.RED + str);
 return isFlying;
   }
 }
