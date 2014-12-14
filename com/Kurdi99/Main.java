@@ -10,22 +10,16 @@ Bukkit.getServer().getPluginManager().registerEvents(this, this);
 public void onDisable() {
 //Later On
 }
-public boolean isFlying(Player p, String name) {
-  if(!p.getFly(true)){
-    return;
-  }else{
-    isFlying = false;
-    String str = "You cannot fly!";
-    p.sendMessage(ChatColor.RED + str);
-return isFlying;
-  }
+public static void getPluginNumber(int plugin, Player sender){
+  plugin = Bukkit.getServer().getPluginManager().getPlugins().length;
+  sender.sendMessage(ChatColor.GOLD + "Number Of Plugins: " + plugin);
 }
-@EventHandler(priority = Priority.HIGH)
-public void onPlayerChat(AsyncPlayerChatEvent e){
-  if(e.getMessage.equalsIgnoreCase("fly")){
-    e.setCancelled(true);
-    e.getPlayer().setFlying(true);
-    e.getPlayer().sendMessage(ChatColor.GOLD + "You can fly!");
-    
+public static void sendToConsole(String msg, boolean b){
+  
+  if(!b == true){
+    return; 
+  }else{
+  System.out.printLn(msg);
+}
 }
 }
