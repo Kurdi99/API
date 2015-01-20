@@ -4,29 +4,33 @@ import org.bukkit.plugin.java.javaplugin;
 
 public class Main extends JavaPlugin {
 
+private String name;
+
+
 public void onEnable() {
 Bukkit.getServer().getPluginManager().registerEvents(this, this);
 }
 public void onDisable() {
 sendToConsole("Plugin uses sendToConsole Method!", true);
 }
-public static void getPluginNumber(int plugin, Player sender){
+public static int getPluginNumber(){
   plugin = Bukkit.getServer().getPluginManager().getPlugins().length;
-  sender.sendMessage(ChatColor.GOLD + "Number Of Plugins: " + plugin);
+return plugin;
 }
 public static void sendToConsole(String msg, boolean b){
   
   if(!b == true){
     return; 
   }else{
-  System.out.printLn(msg);
+  System.out.println(msg);
 }
 }
-public static void killAll(String str){
+public static void killAllPlayers(){
   for(Player all : Bukkit.getServer().getOnlinePlayers){
     all.setHealth(0);
-    all.sendMessage(str);
-    
   }
+}
+public static String getName();
+return name;
 }
 }
