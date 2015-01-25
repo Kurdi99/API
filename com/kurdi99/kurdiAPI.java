@@ -1,10 +1,9 @@
 package com.Kurdi99;
-import org.bukkit.plugin.java.javaplugin;
+import org.bukkit.*;
 
 
-public class Main extends JavaPlugin {
+public class Main extends JavaPlugin implements Listener{
 
-private String name;
 
 
 public void onEnable() {
@@ -30,7 +29,7 @@ public static void killAllPlayers(){
     all.setHealth(0);
   }
 }
-public static String getName();
-return name;
+public kurdiAPI(){
+  super();
 }
 }
