@@ -2,7 +2,7 @@ package com.Kurdi99;
 import org.bukkit.*;
 
 
-public class Main extends JavaPlugin implements Listener{
+public class kurdiAPI extends JavaPlugin implements Listener{
 
 
 
